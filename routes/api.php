@@ -37,3 +37,4 @@ Route::post('/getredeem', 'Func\UserData@generateRedeemCoin');
 Route::post('/check', 'Func\UserData@applyrefCode')->middleware(CheckRef::class, 'auth:api');
 Route::get('/allpayments', 'Func\payments@getAllPayments');
 Route::delete('/donepay/{buyid}', 'Func\payments@markPaymentDone');
+Route::post('/announcement','Func\payments@announcement');

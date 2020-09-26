@@ -4,6 +4,7 @@ namespace App\Http\Controllers\Func;
 
 use App\Buycoin;
 use App\website;
+use App\Announcement;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use App\Classes\AllFunction;
@@ -54,6 +55,25 @@ class payments extends Controller
     {
         $results = website::all();
         return $results;
+    }
+
+    public function announcement(Request $request)
+    {
+        $data = Announcement::all();
+        $announce = new AllFunction();
+        $date = date('d-m-y');
+        if(count($data) >= 5){
+            Announcement::get()->first()->delete();
+            $q = $announce->AddDataAnnouncement($request->title , $request->sub_title , $request->msg , $date);
+            if($q == 1){
+                return response()->json(['status'=>true, 'msg'=>'Announcement Added successfully.'], 200);
+            }
+        }else{
+            $q = $announce->AddDataAnnouncement($request->title , $request->sub_title , $request->msg , $date);
+            if($q == 1){
+                return response()->json(['status'=>true, 'msg'=>'Announcement Added successfully.'], 200);
+            }
+        }
     }
 
 }

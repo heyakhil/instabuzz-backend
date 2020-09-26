@@ -3,6 +3,7 @@ namespace App\Classes;
 
 use App\User;
 use App\notification;
+use App\Announcement;
 
 class AllFunction{
     function random_strings($length_of_string) 
@@ -15,7 +16,15 @@ class AllFunction{
     return substr(str_shuffle($str_result),  
                        0, $length_of_string); 
     } 
-
+    public function AddDataAnnouncement($title , $sub_title , $msg , $date){
+            $announce = new Announcement();
+            $announce->title = $title;
+            $announce->sub_title = $sub_title;
+            $announce->msg = $msg;
+            $announce->date = $date;
+            $announce->save();
+            return true;
+    }
     public function addCoins($coins, $userid)
     {
         $user = new User();

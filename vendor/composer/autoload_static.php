@@ -486,6 +486,7 @@ class ComposerStaticInit976f726065ad47106b95b75f9c28b0b1
     );
 
     public static $classMap = array (
+        'App\\Buycoin' => __DIR__ . '/../..' . '/app/Buycoin.php',
         'App\\Classes\\AllFunction' => __DIR__ . '/../..' . '/app/Classes/AllFunction.php',
         'App\\Console\\Kernel' => __DIR__ . '/../..' . '/app/Console/Kernel.php',
         'App\\Exceptions\\Handler' => __DIR__ . '/../..' . '/app/Exceptions/Handler.php',
@@ -510,6 +511,10 @@ class ComposerStaticInit976f726065ad47106b95b75f9c28b0b1
         'App\\Providers\\EventServiceProvider' => __DIR__ . '/../..' . '/app/Providers/EventServiceProvider.php',
         'App\\Providers\\RouteServiceProvider' => __DIR__ . '/../..' . '/app/Providers/RouteServiceProvider.php',
         'App\\User' => __DIR__ . '/../..' . '/app/User.php',
+        'App\\notification' => __DIR__ . '/../..' . '/app/notification.php',
+        'App\\order' => __DIR__ . '/../..' . '/app/order.php',
+        'App\\redeemcode' => __DIR__ . '/../..' . '/app/redeemcode.php',
+        'App\\website' => __DIR__ . '/../..' . '/app/website.php',
         'ArithmeticError' => __DIR__ . '/..' . '/symfony/polyfill-php70/Resources/stubs/ArithmeticError.php',
         'Asm89\\Stack\\Cors' => __DIR__ . '/..' . '/asm89/stack-cors/src/Cors.php',
         'Asm89\\Stack\\CorsService' => __DIR__ . '/..' . '/asm89/stack-cors/src/CorsService.php',
