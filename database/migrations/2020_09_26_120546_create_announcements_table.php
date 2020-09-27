@@ -19,7 +19,6 @@ class CreateAnnouncementsTable extends Migration
             $table->string('sub_title');
             $table->string('msg');
             $table->string('date');
-            $table->timestamps();
         });
     }
 
