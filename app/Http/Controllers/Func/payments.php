@@ -75,5 +75,9 @@ class payments extends Controller
             }
         }
     }
+    public function allAnnouncement(){
+        $data = Announcement::all();
+        return $data;
+    }
 
 }
