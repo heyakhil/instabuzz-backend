@@ -17,6 +17,7 @@ use App\Http\Middleware\CheckRef;
 Route::middleware('auth:api')->get('/user', function (Request $request) {
     return $request->user();
 });
+//Route without token authentication
 Route::group(['middleware' => ['auth:api']], function () {
 	Route::get('/getorder', 'Func\UserData@getAllOrder');
     Route::get('/web', 'Func\payments@showWeb');
@@ -29,6 +30,7 @@ Route::group(['middleware' => ['auth:api']], function () {
 	Route::get('/history', 'Func\UserData@getHistory');
 	Route::post('/buy', 'Func\UserData@buyCoins');
 });
+//Route without token authentication
 Route::post('/markdone', 'Func\UserData@OrderCompleted');
 Route::post('/addweb', 'Func\payments@addwebsite');
 Route::post('/register', 'UserController@register');
