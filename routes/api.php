@@ -40,3 +40,4 @@ Route::post('/check', 'Func\UserData@applyrefCode')->middleware(CheckRef::class,
 Route::get('/allpayments', 'Func\payments@getAllPayments');
 Route::delete('/donepay/{buyid}', 'Func\payments@markPaymentDone');
 Route::post('/announcement','Func\payments@announcement');
+Route::get('/allAnnouncement','Func\payments@allAnnouncement');
