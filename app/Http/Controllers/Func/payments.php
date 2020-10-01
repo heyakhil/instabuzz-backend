@@ -77,7 +77,7 @@ class payments extends Controller
     }
     public function allAnnouncement(){
         $data = Announcement::all();
-        return $data;
+        return response()->json(['status'=>true, 'msg'=>$data], 200);
     }
 
 }
